@@ -22,7 +22,12 @@ body {
 }
 
 .introduction {
-  text-align: center;
+  text-align: left;
+}
+
+.portrait {
+  float: right;
+  border-radius: 50%;
 }
 
 .title {
