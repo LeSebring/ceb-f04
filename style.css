@@ -49,10 +49,17 @@ table {
 }
 
 /* image Menu */
+
 .image-menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.image-menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 figure {
@@ -109,17 +116,34 @@ p.introduction {
   text-align: left;
 }
 
+.food-top {
+  height: 240px;
+  text-align: center;
+}
+
+.paella {
+  border-radius: 50% 50% 0 50%;
+  margin-right: 3px;
+}
+
+.gazpacho {
+  border-radius: 50% 50% 50% 0;
+  margin-left: 3px;
+}
+
 .food {
   height: 240px;
+  text-align: center;
 }
 
 .tosta {
   border-radius: 50% 0 50% 50%;
-  margin-right: 10px;
+  margin-right: 3px;
 }
 
 .fabada {
   border-radius: 0 50% 50% 50%;
+  margin-left: 3px;
 }
 
 /* Header */
@@ -138,15 +162,18 @@ p.introduction {
 .header-logo {
   width: 40%;
 }
+
 .header-list ul {
   display: flex;
   list-style: none;
 }
+
 .header-logo img {
   width: 80px;
   padding-top: 8px;
   padding-left: 40px;
 }
+
 .header-list li {
   line-height: 60px;
   margin-right: 20px;
@@ -160,28 +187,30 @@ a {
 }
 
 .header-list li:hover {
-  background-color: gray;
+  background-color: white;
   transition: all 1s ease-in-out;
   color: black;
 }
 
-.header input {
+.header-logo input {
   display: none;
 }
-.header label {
+.header-logo label {
   display: none;
 }
 
 @media (max-width: 1000px) {
   .header {
+    justify-content: center;
     height: auto;
     padding: 10px;
     width: 100%;
     flex-wrap: wrap;
-    align-items: center;
   }
   .header-logo {
     display: flex;
+    width: 100%;
+    align-items: center;
   }
   .header-logo label {
     display: block;
@@ -202,14 +231,11 @@ a {
     width: 100%;
   }
   .header-list {
-    display: none;
-  }
-  .header label {
     display: block;
   }
 
-  #icon-logo:checked ~ .header-list {
-    display: block;
+  .input[checkbox]:checked ~ img {
+    background: red;
   }
 }
 
@@ -237,6 +263,17 @@ a {
   .awards li {
     list-style: none;
   }
+   
+  .image-menu-top {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  figure {
+    width: 50%
+  }
+
 
   .image-menu {
     flex-direction: column;
@@ -244,12 +281,12 @@ a {
     align-items: center;
   }
 
-  .image-menu img {
+  .image-menu-top img {
     text-align: center;
   }
-
-  .food {
-    height: 240px;
+  
+  .image-menu img {
+    text-align: center;
   }
 
   .tosta {
@@ -274,4 +311,3 @@ a {
     padding: 20px 20px;
   }
 }
-
